@@ -1,0 +1,198 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: "microsoft yahei";
+	font-size: 0.8em;
+	background-color: #DEDEDE;
+	/*min-width: 960px;*/
+}
+
+img{
+	width:32%;
+}
+
+h1,h2,h3{
+	margin:10px 0;
+}
+
+h3{
+	font-weight: normal;
+}
+
+address{
+	font-style: normal;
+}
+
+.ul-list{
+	margin-left: 20px;
+}
+
+.ul-list li{
+	list-style: none;
+}
+
+header{
+	width:100%;
+	height:50px;
+	background-color: #333333;
+}
+
+header>img{
+	margin-top:6px;
+	margin-left: 2%;
+	width:90px;
+}
+
+nav{
+	float:right;
+	width:360px;
+	height:100%;
+	margin-top:16px;
+}
+
+nav>ul li{
+	float:left;
+	width:90px;;
+}
+
+nav>ul li a{
+	color:white;
+	text-decoration: none;
+}
+
+article,aside{
+	background-color: white;
+	margin:20px;
+	padding:20px;
+	line-height: 150%;
+	-webkit-box-shadow: 3px 3px 3px;  
+  -moz-box-shadow: 3px 3px 3px;  
+  box-shadow: 3px 3px 3px; 
+}
+
+.indent{
+	text-indent: 2em;
+}
+
+figure{
+	border:1px solid #999;
+	margin:16px 0;
+	text-align: center;
+	width:240px;
+}
+
+figure>img{
+		width:220px;
+}
+
+figcaption{
+	margin:8px 0;
+}
+
+.ol-list{
+	margin-left:32px;
+	font-weight: bold;
+}
+
+.ol-list li{
+	margin:6px 0;
+}
+
+.table{
+	border-collapse: collapse;
+	border:1px solid #999;
+	width:100%;
+}
+
+.table th{
+	background-color: #333333;
+	color: white;
+}
+
+.table th,.table td{
+	border:1px solid #999;
+	text-align: left;
+	line-height: 24px;
+	padding-left:4px
+}
+
+tfoot{
+	background-color: #999;
+}
+
+tfoot>tr>td{
+	font-weight: bold;
+}
+
+aside>h1{
+	border-left: 2px solid #999;
+	padding-left:6px;
+	padding-top:6px;
+	padding-bottom: 6px;
+}
+
+form{
+	overflow:hidden;
+}
+
+.div-left{
+	width:30%;
+	height:24px;
+	float:left;
+	text-align: right;
+}
+
+.div-right{
+	width:60%;
+	height:28px;
+	margin-left:8px;
+	float:left;
+	text-align: left;
+}
+
+.height{
+	height: 80px;
+}
+
+.right{
+	text-align: right;
+	padding-right: 8px;
+}
+
+.color{
+	color:#999;
+}
+
+form input{
+	border:1px solid #999;
+	height: 20px;
+}
+
+textarea{
+	width:60%;
+	height:64px;
+}
+
+form button{
+	width:100%;
+	line-height: 32px;
+	background-color: #3155CF;
+	color: white;
+	border:#3155CF;
+	font-family: "microsoft yahei";
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;
+}
+
+footer{
+	width:100%;
+	height:42px;
+	padding-top:24px;
+	background-color: #333333;
+	color:white;
+	text-align: center;
+}
