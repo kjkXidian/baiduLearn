@@ -1,0 +1,90 @@
+table{
+	font-weight: bold;
+}
+thead{
+	background-color: black;
+	color: white;
+}
+tbody tr:nth-child(2n+2){
+	background-color: #ccc;
+}
+tbody tr:nth-child(1),tbody tr:nth-child(2),tbody tr:nth-child(3){
+	color: #f00;
+}
+.input_container{
+	margin-top: 50px;
+	padding: 20px;
+}
+input{
+	display: block;
+	margin: 20px;
+	width: 100px;
+	transition: width 1s linear;
+}
+input:focus{
+	width: 200px;
+}
+.banner_container{
+	position: relative;
+	width: 500px;
+	height: 200px;
+	background-color: yellow;
+}
+.btn_container{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+}
+.btn_container [class*=btn]{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	top: 0px;
+	float: right;
+	background-color: rgba(255,255,255,0.5);
+	margin: 2px;
+	padding-bottom: 1px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 30px;
+}
+.banner_one{
+	position: absolute;
+	width: 500px;
+	height: 200px;
+	background-color: green;
+}
+.banner_two{
+	position: absolute;
+	width: 500px;
+	height: 200px;
+	background-color: #ccc;
+}
+.banner_three{
+	position: absolute;
+	width: 500px;
+	height: 200px;
+	background-color: blue;
+}
+@keyframes change{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 0%;
+	}
+}
+#one:target{
+	z-index: 5;
+	animation: change 1s linear;
+}
+#two:target{
+	z-index: 5;
+	animation: change 1s linear;
+}
+#three:target{
+	z-index: 5;
+	animation: change 1s linear;
+}
