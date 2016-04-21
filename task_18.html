@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>task18：基础JavaScript练习</title>
+		<style type="text/css">
+			div {
+				padding: 8px 12px;
+				float: left;
+				margin: 12px 6px;
+				background-color: red;
+				cursor: pointer;
+				color: white;
+			}
+		</style>
+		<script type="text/javascript">
+			$ = function(s) {
+				return document.querySelector(s);
+			}
+			$$ = function(s) {
+				return document.querySelectorAll(s);
+			}
+			window.onload = function() {
+				var article = $("article"); //获取article
+				var btn1 = $("#btn1"); //获取按钮1
+				var btn2 = $("#btn2"); //获取按钮2
+				var btn3 = $("#btn3"); //获取按钮3
+				var btn4 = $("#btn4"); //获取按钮4
+				//为按钮1添加点击监听事件
+				btn1.addEventListener("click", function() {
+					var number = $("#input").value;
+					if (number.trim().length == 0) { //判断输入是否为空
+						alert("输入不能为空");
+						return false;
+					}
+					if (isNaN(number)) { //判断输入是否为数字
+						alert("请输入一个数字");
+						return false;
+					}
+					var div = document.createElement("div"); //创建一个div元素
+					div.setAttribute("onclick", "deleteDiv(this)"); //为div元素添加点击事件
+					var inner = document.createTextNode(number);
+					div.appendChild(inner);
+					var first = article.firstChild;
+					article.insertBefore(div, first); //将div加到队列最前面
+				});
+				//为按钮2添加点击监听事件
+				btn2.addEventListener("click", function() {
+					var number = $("#input").value;
+					if (number.trim().length == 0) {
+						alert("输入不能为空");
+						return false;
+					}
+					if (isNaN(number)) {
+						alert("请输入一个数字");
+						return false;
+					}
+					var div = document.createElement("div");
+					div.setAttribute("onclick", "deleteDiv(this)");
+					var inner = document.createTextNode(number);
+					div.appendChild(inner);
+					article.appendChild(div);
+				});
+				//为按钮3添加点击监听事件
+				btn3.addEventListener("click", function() {
+					var div = article.firstChild;
+					var number = div.innerHTML;
+					div.remove();
+					alert(number);
+				});
+				//为按钮4添加点击监听事件
+				btn4.addEventListener("click", function() {
+					var div = article.lastChild;
+					var number = div.innerHTML;
+					div.remove();
+					alert(number);
+				});
+			}
+
+			function deleteDiv(div) {
+				div.remove();
+			}
+		</script>
+	</head>
+
+	<body>
+		<section>
+			<input type="text" id="input" />
+			<button id="btn1">左侧入</button>
+			<button id="btn2">右侧入</button>
+			<button id="btn3">左侧出</button>
+			<button id="btn4">右侧出</button>
+			<article></article>
+		</section>
+	</body>
+
+</html>
