@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>task18：基础JavaScript练习</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			fieldset {
+				border: 0;
+				margin-top: 36px;
+			}
+			
+			section {
+				width: 840px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 36px;
+				text-align: center;
+			}
+			
+			div {
+				width: 12px;
+				float: left;
+				margin: 8px 2px;
+				cursor: pointer;
+				color: white;
+			}
+			
+			.red {
+				background-color: red;
+			}
+			
+			.blue {
+				background-color: blue;
+			}
+			
+			.green {
+				background-color: green;
+			}
+			
+			article {
+				margin-top: 24px;
+				padding: 0 16px;
+				align-items: flex-end;
+				display: flex;
+				height: 360px;
+				border: 1px solid #BDBDBD;
+				border-radius: 10px;
+				justify-content: center;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var article = document.getElementsByTagName("article")[0]; //获取article
+				var btn1 = document.getElementById("btn1"); //获取按钮1
+				var btn2 = document.getElementById("btn2"); //获取按钮2
+				var btn3 = document.getElementById("btn3"); //获取按钮3
+				var btn4 = document.getElementById("btn4"); //获取按钮4
+				var btn5 = document.getElementById("btn5"); //获取按钮5
+				var btn6 = document.getElementById("btn6"); //获取按钮6
+				//为按钮1添加点击监听事件
+				btn1.addEventListener("click", function() {
+					var number = document.getElementById("input").value;
+					creatDiv(article, "left", number);
+				});
+				//为按钮2添加点击监听事件
+				btn2.addEventListener("click", function() {
+					var number = document.getElementById("input").value;
+					creatDiv(article, "right", number);
+				});
+				//为按钮3添加点击监听事件
+				btn3.addEventListener("click", function() {
+					var div = article.firstChild;
+					div.remove();
+				});
+				//为按钮4添加点击监听事件
+				btn4.addEventListener("click", function() {
+					var div = article.lastChild;
+					div.remove();
+				});
+				btn5.addEventListener("click", function() {
+					article.innerHTML = "";
+					var a = []; //临时数组
+					for (var i = 0; i < 50; i++) { //随机生成50个
+						a.push(Math.floor(Math.random() * 91 + 10));
+					};
+					for (var i = 0; i < a.length; i++) { //随机生成50个
+						creatDiv(article, "right", a[i].toString());
+					};
+				});
+				btn6.addEventListener("click", function() {
+					var div = document.getElementsByTagName("div");
+					bubble_sort(div);
+				});
+			}
+
+			function deleteDiv(div) {
+				div.remove();
+			}
+
+			function creatDiv(article, dir, number) {
+				var count = document.getElementsByClassName("red").length;
+				if (count >= 60) {
+					alert("不能多于60个");
+					return false;
+				}
+				if (number.trim().length == 0) {
+					alert("输入不能为空");
+					return false;
+				}
+				if (isNaN(number)) {
+					alert("请输入一个10到100之间的数字");
+					return false;
+				}
+				if (number > 100 || number < 10) {
+					alert("请输入一个10到100之间的数字");
+					return false;
+				}
+				var div = document.createElement("div");
+				div.setAttribute("class", "red");
+				div.setAttribute("onclick", "deleteDiv(this)");
+				div.style.height = Math.round(number)*3 + "px";
+				if (dir == "right") {
+					article.appendChild(div);
+				} else {
+					var first = article.firstChild;
+					article.insertBefore(div, first); //将div加到队列最前面
+				}
+			}
+
+			function bubble_sort(div) {
+				for (var i = 0; i < div.length; i++) {
+					div[i].setAttribute("class", "blue");
+					for (var j = i; j < div.length; j++) {
+						if (i != j) div[j].setAttribute("class", "green");
+						setTimeout(change(div[i],div[j]), 1000000);
+							if (i != j) div[j].setAttribute("class", "red");
+						}
+							div[i].setAttribute("class", "red");
+						}
+					}
+			function change(div1,div2){
+				if (parseFloat(div1.style.height) > parseFloat(div2.style.height)) {
+									var temp = div1.style.height;
+									div1.style.height = div2.style.height;
+									div2.style.height = temp;
+								}
+			}
+		</script>
+	</head>
+
+	<body>
+		<section>
+			<fieldset>
+				<input type="text" id="input" placeholder="请输入10到100之间的数字" />
+				<button id="btn1">左侧入</button>
+				<button id="btn2">右侧入</button>
+				<button id="btn3">左侧出</button>
+				<button id="btn4">右侧出</button>
+				<button id="btn5">50个随机</button>
+				<button id="btn6">排序</button>
+			</fieldset>
+			<article></article>
+		</section>
+	</body>
+
+</html>
