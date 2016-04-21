@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单验证</title>
+	<!-- 为了避免FOUC，将表单放在顶部 -->
+	<link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+	<div id="content">
+		<div class="align-center">
+			<label for="username" class="name">名&nbsp;称</label>
+			<input type="text" id="input" class="text" />
+			<input type="button" id="button" value="验证" class="test" />
+			<p id="info">必填，长度为4~16个字符</p>
+		</div>
+	</div>
+	
+	<!-- 为了避免加载js时，后面的代码无法解析而出现白屏，把js放在下面、</body>前 -->
+	<script type="text/javascript" src="script/main.js">
+	</script>
+</body>
+</html>
