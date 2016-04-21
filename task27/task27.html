@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> planet</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/task27.css">
+</head>
+<body>
+	<div class="wlc">
+		<span> 欢迎来到 “ 行星与飞船 ” 的世界</span>
+	</div>
+	<div class="wrapper">
+		<div class="orbit_1" id="orbit_1">
+			<div class="orbit_2" id="orbit_2">
+				<div class="orbit_3" id="orbit_3">
+					<div class="orbit_4" id="orbit_4">
+						<div class="planet">
+							<span> Planet </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="foot">
+		<div class="control-btn">
+			<div class="btn-div-1">
+				<button type="button" id="runShip1" class="btn" >1号 运行</button>
+				<button type="button" id="stopShip1" class="btn">1号 暂停</button>
+				<button type="button" id="desShip1" class="btn">1号 自毁</button>
+			</div>
+			<div class="btn-div-2">
+				<button type="button" id="runShip2" class="btn">2号 运行</button>
+				<button type="button" id="stopShip2" class="btn">2号 暂停</button>
+				<button type="button" id="desShip2" class="btn">2号 自毁</button>
+			</div>
+			<div class="btn-div-3">
+				<button type="button" id="runShip3" class="btn">3号 运行</button>
+				<button type="button" id="stopShip3" class="btn">3号 暂停</button>
+				<button type="button" id="desShip3" class="btn">3号 自毁</button>
+			</div>
+			<div class="btn-div-4">
+				<button type="button" id="runShip4" class="btn">4号 运行</button>
+				<button type="button" id="stopShip4" class="btn">4号 暂停</button>
+				<button type="button" id="desShip4" class="btn">4号 自毁</button>
+			</div>
+		</div>
+		<div class="tip-window">
+			<span> Tips:</span>
+			<ul id="tip-ul"></ul>
+		</div>
+		<div class="createControl">
+			<form id="choseForm" >
+				<span> 选择创建飞船的型号</span>
+				<div id="driveSystemChoose" class="choose">
+					<input type="radio" name="type" value="qjh"> 前进号(速率 30px/s, 能耗 5%/s)
+					<input type="radio" name="type" value="bth"> 奔腾号(速率 50px/s, 能耗 7%/s)
+					<input type="radio" name="type" value="cyh"> 超越号(速率 80px/s, 能耗 9%/s)
+				</div>
+				<div id="energeSystemChoose" class="choose">
+					<input type="radio" name="energeType" value="jlx"> 劲量型(补充能源速度 2%/s)
+					<input type="radio" name="energeType" value="gnx"> 光能型(补充能源速度 3%/s)
+					<input type="radio" name="energeType" value="yjx"> 永久型(补充能源速度 4%/s)
+				</div>
+				<div id="orbitChoose" class="choose">
+					<input type="radio" name="orbit" value="1"> 1 号轨道
+					<input type="radio" name="orbit" value="2"> 2 号轨道
+					<input type="radio" name="orbit" value="3"> 3 号轨道
+					<input type="radio" name="orbit" value="4"> 4 号轨道
+				</div>
+				<br>
+				<button type="submit" class="btn btn-right"> 创建飞船</button>
+			</form>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/ship.js"></script>
+	<script type="text/javascript" src="js/bus.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
