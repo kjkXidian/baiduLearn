@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task31</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div id="container"> 
+		<div id="selectRadio">
+			<span class="radio">
+				<input type="radio" id="inSchool" checked="checked" name="school" />在校生
+			</span>
+			<span class="radio">
+				<input type="radio" id="outSchool" name="school"/ >非在校生
+			</span>
+			
+		</div>
+		<div id="content">
+			<!-- 学校 -->
+			<div id="school">
+				<span>学校</span>
+				<select  id="region" class="select">
+					<option value="bj">北京</option>
+					<option value="sh">上海</option>
+					<option value="xi">西安</option>
+					<option value="hz">杭州</option>
+				</select>
+
+				<select  id="schools">
+					<option value="bd">北京大学</option>
+					<option value="qh">清华大学</option>
+					<option value="bw">北京外国语大学</option>
+				</select>
+			</div>
+			
+			<!-- 就业单位 -->
+			<div id="work">
+				<span>就业单位</span>
+				<input type="text">
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

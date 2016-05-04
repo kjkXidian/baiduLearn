@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task 30</title>
+	<!-- 为了避免FOUC，将表单放在顶部 -->
+	<link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+<div>
+	<div id="content">
+		<table class="align">
+			<tr>
+				<td><label for="username" class="name">名&nbsp;称</label></td>
+				<td>
+					<input type="text" id="input" class="text" />
+					<p id="nameInfo">&nbsp;</p>
+				</td>
+			</tr>
+
+			<tr>
+				<td><label for="password" class="name">密&nbsp;码</label></td>
+				<td>
+					<input type="password" id="password" class="password" />
+					<p id="passwordInfo">&nbsp;</p>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="repass" class="name">密码确认</label></td>
+				<td>
+					<input type="password" id="repass" class="repass" />
+					<p id="repassInfo">&nbsp;</p>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="email" class="name">邮&nbsp;箱</label></td>
+				<td>
+					<input type="email" id="email" class="email" />
+					<p id="emailInfo">&nbsp;</p>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="phone" class="name">手&nbsp;机</label></td>
+				<td>
+					<input type="text" id="phone" class="phone" />
+					<p id="phoneInfo">&nbsp;</p>
+				</td>
+			</tr>
+		</table>
+
+		<input type="button" value="提&nbsp;&nbsp;交" id="submit" />
+	</div>
+
+	<div id="box">
+		表单提交成功
+	</div>
+	<div id="box2">
+		提交失败，请检查表单!
+	</div>
+</div>
+
+	
+	<!-- 为了避免加载js时，后面的代码无法解析而出现白屏，把js放在下面、</body>前 -->
+	<script type="text/javascript" src="script/main.js">
+	</script>
+</body>
+</html>

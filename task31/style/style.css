@@ -1,0 +1,56 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#container{
+	width:600px;
+	height:200px;
+	border:1px solid pink;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left: -300px;
+	margin-top:-100px;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.radio{
+	font-size: 26px;
+	font-weight: bolder;
+	margin-left: 100px;
+}
+
+#work{
+	display: none;
+}
+
+#school span,#work span{
+	font-size: 22px;
+	margin-right:30px;
+}
+#region{
+	width:120px;
+	height: 34px;
+	font-size:16px;
+	/*display: inline-block;*/
+	margin-right:60px;
+	margin-top:30px;
+}
+#schools{
+	width:200px;
+	height:34px;
+	font-size: 16px;
+}
+#work input{
+	border:1px solid grey;
+	border-radius: 4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	width:400px;
+	height:34px;
+	font-size: 16px;
+	line-height: 1.4;
+	margin-top: 30px;
+}

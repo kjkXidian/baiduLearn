@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	min-width: 1280px;
+	color: #393a3a;
+	position: relative;
+}
+header{
+	width: 100%;
+	height: 56px;
+	position: fixed;
+	top: 0;
+}
+header img{
+	width: 31px;
+	height: 31px;
+	padding-left: 59px;
+	padding-top: 13px;
+}
+header .title{
+	font:21px SimHei;
+	line-height: 56px;
+	padding-left: 10px;
+}
+nav{
+	font: 14px "MicrosoftYaHei";
+	color: #767777;
+
+}
+nav ul li{
+	display: inline-block;
+}
+
+/*._编组_ {
+  background-image: url("<编组>.png");
+  position: absolute;
+  left: 59px;
+  top: 13px;
+  width: 31px;
+  height: 31px;
+  z-index: 7;
+}
+*/
